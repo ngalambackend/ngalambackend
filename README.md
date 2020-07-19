@@ -45,4 +45,4 @@
 * [Ramsey UUID](https://github.com/ramsey/uuid "Ramsey UUID")
 
 #### Contributors
-* [Crew](https://github.com/ngalambackend/ngalambackendcommunity/graphs/contributors "Crew")
+* [Crew](https://github.com/orgs/ngalambackend/teams/crew/members "Crew")
