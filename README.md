@@ -20,19 +20,23 @@
 	```
 	composer install
 	```
-5. Generate new key
+5. Install node modules
+    ```
+    npm install 
+    ```
+6. Generate new key
     ```
     php artisan key:generate
     ```
-6. Generate Tables
+7. Generate Tables
 	```
 	php artisan migrate
     ```
-7. Insert datas using seeder 
+8. Insert datas using seeder 
     ```
     php artisan db:seed
     ```
-8. Run your web with this command
+9. Run your web with this command
     ```
     php artisan serve
     ```
