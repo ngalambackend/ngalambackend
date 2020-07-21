@@ -21,16 +21,6 @@
             <div class="login-brand">
               <img src="{{ asset('assets/img/nbc-profile.jpg') }}" alt="logo" width="100" class="shadow-light rounded-circle">
             </div>
-            @if(session()->has('info'))
-            <div class="alert alert-primary">
-                {{ session()->get('info') }}
-            </div>
-            @endif
-            @if(session()->has('status'))
-            <div class="alert alert-info">
-                {{ session()->get('status') }}
-            </div>
-            @endif
             @yield('content')
             <div class="simple-footer">
               Copyright &copy; {{ env('APP_NAME') }} {{ date('Y') }}

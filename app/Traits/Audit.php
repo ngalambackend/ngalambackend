@@ -9,7 +9,7 @@ trait Audit
     protected static function bootAudit()
     {
         static::creating(function ($model) {
-            $model->created_by = auth()->user()->id;
+            $model->created_by = auth()->user()->id ?? null;
         });
 
         static::updating(function ($model) {
