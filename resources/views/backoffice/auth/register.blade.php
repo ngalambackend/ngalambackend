@@ -1,11 +1,11 @@
-@extends('layouts.auth')
+@extends('backoffice.layouts.auth')
 
 @section('content')
 <div class="card card-primary">
     <div class="card-header"><h4>{{ __('Register') }}</h4></div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route('register.store') }}">
+        <form method="POST" action="{{ route('backoffice.register') }}">
             @csrf
 
             <div class="form-group">
@@ -49,12 +49,10 @@
                 @enderror
             </div>
 
-            <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Register') }}
-                    </button>
-                </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    {{ __('Register') }}
+                </button>
             </div>
         </form>
     </div>
