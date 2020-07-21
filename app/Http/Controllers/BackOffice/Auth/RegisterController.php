@@ -2,31 +2,14 @@
 
 namespace App\Http\Controllers\BackOffice\Auth;
 
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\UserManagement\Admin;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +19,23 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'      => 'required',
+            'email'     => 'required|unique:admins,email',
+            'password'  => 'required',
+            'password_confirmation' => 'required|same:password|min:8'
+        ]);
+
+        $admin  = new Admin();
+
+        $admin->name            = $request->name;
+        $admin->email           = $request->email;
+        $admin->remember_token  = Str::random(60);
+        $admin->password        = Hash::make($request->password_confirmation);
+        $admin->save();
+
+        alert()->success('Yay! Now you can login to the system', 'Registered');
+        return redirect()->back();
     }
 
     /**
