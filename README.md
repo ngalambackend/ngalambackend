@@ -4,7 +4,7 @@
 #### How to install
 1. Run this command in your terminal to enter the application folder
 	```
-	cd ngalambackendcommunity
+	cd ngalambackend
     ```
 2. Setup Env. Copy `.env.example` to new file `.env`
     ```
