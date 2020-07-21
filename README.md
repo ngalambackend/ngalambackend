@@ -1,5 +1,5 @@
 #### Entity Relationship Diagram
-[![ERD](https://raw.githubusercontent.com/ngalambackend/ngalambackend/master/ngalambackend-erd.png?token=ACMF5BFLOYKTPYIJVDDJQNS7CRRE4)](https://raw.githubusercontent.com/ngalambackend/ngalambackend/master/ngalambackend-erd.png?token=ACMF5BFLOYKTPYIJVDDJQNS7CRRE4)
+[![ERD](https://github.com/ngalambackend/ngalambackend/blob/develop/ngalambackend-erd.png)](https://github.com/ngalambackend/ngalambackend/blob/develop/ngalambackend-erd.png)
 
 #### How to install
 1. Run this command in your terminal to enter the application folder
