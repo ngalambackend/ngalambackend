@@ -5,11 +5,12 @@
 </form>
 <ul class="navbar-nav navbar-right">
   <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-    <div class="d-sm-none d-lg-inline-block">Hi, John Doe</div></a>
+    <img alt="image" src="{{ asset('assets/img/avatar.png') }}" class="rounded-circle mr-1">
+    <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }}</div></a>
     <div class="dropdown-menu dropdown-menu-right">
-      <div class="dropdown-title">Welcome, John Doe</div>
+      <div class="dropdown-title">Welcome, {{ Auth::user()->name }}</div>
       <a href="#" class="dropdown-item has-icon">
-        <i class="far fa-user"></i> Profile Settings
+        <i class="far fa-user"></i> Profile
       </a>
       <div class="dropdown-divider"></div>
       <a href="{{ route('backoffice.logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
