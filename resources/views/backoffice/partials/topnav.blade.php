@@ -12,9 +12,13 @@
         <i class="far fa-user"></i> Profile Settings
       </a>
       <div class="dropdown-divider"></div>
-      <a href="#" class="dropdown-item has-icon text-danger">
+      <a href="{{ route('backoffice.logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <i class="fas fa-sign-out-alt"></i> Logout
       </a>
     </div>
   </li>
 </ul>
+
+<form id="logout-form" action="{{ route('backoffice.logout') }}" method="POST" style="display: none;">
+    @csrf
+</form>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <!-- Template -->
   <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('stisla/css/component.css') }}">
+  <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
   @stack('stylesheet')
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
