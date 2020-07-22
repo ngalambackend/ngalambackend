@@ -16,7 +16,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "ramsey/uuid": "^4.0",
-        "uxweb/sweet-alert": "^2.0"
+        "uxweb/sweet-alert": "^2.0",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

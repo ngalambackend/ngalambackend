@@ -19,3 +19,7 @@
     </footer>
   </div>
 @endsection
+@section('javascript')
+    @stack('js')
+    @yield('js')
+@endsection
