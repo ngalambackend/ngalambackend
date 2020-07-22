@@ -19,6 +19,16 @@ Route::prefix('backoffice')->name('backoffice.')->namespace('BackOffice')->group
 
     Route::middleware('auth:backoffice')->group(function() {
         Route::get('/home', 'HomeController@index')->name('home');
+
+        /**
+         * @todo Profiles
+         */
+        Route::prefix('profile')->name('profile.')->group(function() {
+            Route::put('/reset', 'ProfileController@reset')->name('reset');
+            Route::get('/password', 'ProfileController@password')->name('password');
+            Route::put('/update', 'ProfileController@update')->name('update');
+            Route::get('/', 'ProfileController@index')->name('index');
+        });
     });
 });
 

@@ -1,10 +1,10 @@
 #### Entity Relationship Diagram
-[![ERD](https://raw.githubusercontent.com/ngalambackend/ngalambackend/master/ngalambackend-erd.png?token=ACMF5BFLOYKTPYIJVDDJQNS7CRRE4)](https://raw.githubusercontent.com/ngalambackend/ngalambackend/master/ngalambackend-erd.png?token=ACMF5BFLOYKTPYIJVDDJQNS7CRRE4)
+[![ERD](https://github.com/ngalambackend/ngalambackend/blob/develop/ngalambackend-erd.png)](https://github.com/ngalambackend/ngalambackend/blob/develop/ngalambackend-erd.png)
 
 #### How to install
 1. Run this command in your terminal to enter the application folder
 	```
-	cd ngalambackendcommunity
+	cd ngalambackend
     ```
 2. Setup Env. Copy `.env.example` to new file `.env`
     ```
@@ -20,23 +20,19 @@
 	```
 	composer install
 	```
-5. Install node modules
-    ```
-    npm install 
-    ```
-6. Generate new key
+5. Generate new key
     ```
     php artisan key:generate
     ```
-7. Generate Tables
+6. Generate Tables
 	```
 	php artisan migrate
     ```
-8. Insert datas using seeder 
+7. Insert datas using seeder 
     ```
     php artisan db:seed
     ```
-9. Run your web with this command
+8. Run your web with this command
     ```
     php artisan serve
     ```
