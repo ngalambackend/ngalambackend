@@ -29,6 +29,22 @@ Route::prefix('backoffice')->name('backoffice.')->namespace('BackOffice')->group
             Route::put('/update', 'ProfileController@update')->name('update');
             Route::get('/', 'ProfileController@index')->name('index');
         });
+
+        /**
+         * @link Settings
+         */
+        Route::prefix('setting')->name('setting.')->namespace('Settings')->group(function() {
+            /**
+             * @todo Admins
+             */
+            Route::prefix('admin')->name('admin.')->group(function() {
+                Route::post('/destroy/{admin_id}', 'AdminController@destroy')->name('destroy');
+                Route::post('/update/{admin_id}', 'AdminController@update')->name('update');
+                Route::post('/store', 'AdminController@store')->name('store');
+                Route::get('/index-json', 'AdminController@indexJson')->name('indexJson');
+                Route::get('/', 'AdminController@index')->name('index');
+            });
+        });
     });
 });
 
