@@ -19,6 +19,13 @@ Route::prefix('backoffice')->name('backoffice.')->namespace('BackOffice')->group
 
     Route::middleware('auth:backoffice')->group(function() {
         Route::get('/home', 'HomeController@index')->name('home');
+
+        /**
+         * @todo Profiles
+         */
+        Route::prefix('profile')->name('profile.')->group(function() {
+            Route::get('/', 'ProfileController@index')->name('index');
+        });
     });
 });
 
