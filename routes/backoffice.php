@@ -44,6 +44,16 @@ Route::prefix('backoffice')->name('backoffice.')->namespace('BackOffice')->group
                 Route::get('/index-json', 'AdminController@indexJson')->name('indexJson');
                 Route::get('/', 'AdminController@index')->name('index');
             });
+            /**
+             * @todo Skills
+             */
+            Route::prefix('skill')->name('skill.')->group(function() {
+                Route::post('/destroy/{skill_id}', 'SkillController@destroy')->name('destroy');
+                Route::post('/update/{skill_id}', 'SkillController@update')->name('update');
+                Route::post('/store', 'SkillController@store')->name('store');
+                Route::get('/index-json', 'SkillController@indexJson')->name('indexJson');
+                Route::get('/', 'SkillController@index')->name('index');
+            });
         });
     });
 });

@@ -10,5 +10,10 @@
     <li class="{{ setActive('backoffice.home') }}"><a class="nav-link" href="{{ route('backoffice.home') }}"><i class="fas fa-fire-alt"></i> <span>Dashboard</span></a></li>
     <li class="menu-header">Menus</li>
     <li class="{{ setActive('backoffice.setting.admin.*') }}"><a class="nav-link" href="{{ route('backoffice.setting.admin.index') }}"><i class="fas fa-users"></i> <span>Admins</span></a></li>
+    <li class="{{ setActive('backoffice.setting.skill.*') }}">
+      <a class="nav-link" href="{{ route('backoffice.setting.skill.index') }}">
+        <i class="fas fa-users"></i> <span>Skills</span>
+      </a>
+    </li>
   </ul>
 </aside>
